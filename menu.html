@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Menu - Drinks & Food</title>
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    #menu {
+      background-color: transparent;
+    }
+
+    /* MENU Heading */
+    .menu-heading {
+      text-align: center;
+      font-size: 3rem;
+      color: #6A4E42;
+      font-family: 'Georgia', serif;
+    }
+
+    .menu-heading-lines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      margin-bottom: 60px;
+    }
+
+    /* Upper Line (Bigger width) */
+    .menu-heading-lines .line:first-child {
+      width: 120px;
+      height: 4px;
+      background-color: #C0A062;
+    }
+
+    /* Lower Line (Default width) */
+    .menu-heading-lines .line:last-child {
+      width: 80px;
+      height: 4px;
+      background-color: #C0A062;
+    }
+
+    /* Our Drinks Title with Left-Aligned Line */
+    .our-drinks {
+      position: relative;
+      font-size: 2rem;
+      color: #6A4E42;
+      margin-bottom: 70px;
+      width: fit-content;
+      padding-bottom: 10px;
+    }
+
+    .our-drinks::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 100%;
+      background-color: #C0A062;
+    }
+
+    /* Our Food Title with Left-Aligned Line */
+    .our-food {
+      position: relative;
+      font-size: 2rem;
+      color: #6A4E42;
+      margin-bottom: 100px; /* Increased space from Drinks section */
+      margin-top: 100px;  /* Added space above Our Food */
+      width: fit-content;
+      padding-bottom: 10px;
+    }
+
+    .our-food::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 100%;
+      background-color: #C0A062;
+    }
+
+    /* Menu Grid Layout */
+    .menu-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      row-gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      text-align: left;
+    }
+
+    .drink-img, .food-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .drink-img img, .food-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .drink-name, .food-name {
+      margin: 0;
+    }
+
+    .drink-name h3, .food-name h3 {
+      font-size: 1.5rem;
+      color: #6A4E42;
+    }
+
+
+
+    .menu-heading {
+        text-align: center;
+        font-size: 3rem;
+        color: #6A4E42;
+        font-family: 'Georgia', serif;
+    }
+
+    .menu-heading-lines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        margin-top: 10px;
+        margin-bottom: 60px;
+    }
+
+    .menu-heading-lines .line {
+        width: 80px;
+        height: 4px;
+        background-color: #C0A062;
+    }
+
+    .our-desserts {
+        position: relative;
+        font-size: 2rem;
+        color: #6A4E42;
+        margin-bottom: 70px;
+        width: fit-content;
+        padding-bottom: 10px;
+    }
+
+    .our-desserts::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 4px;
+        width: 100%;
+        background-color: #C0A062;
+    }
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 items in each row */
+        gap: 40px;
+        row-gap: 80px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .menu-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    .dessert-img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        margin-right: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dessert-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .dessert-name h3 {
+        font-size: 1.5rem;
+        color: #6A4E42;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- Menu Section -->
+  <section id="menu">
+    <h1 class="menu-heading">MENU</h1>
+    <div class="menu-heading-lines">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <!-- Our Drinks Section -->
+    <div class="our-drinks">
+      <p>Our Drinks</p>
+    </div>
+
+    <div class="menu-container">
+      <!-- Drink Items (12 Total) -->
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/espresso.jpg" alt="Espresso"></div>
+        <div class="drink-name"><h3>Espresso</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/latte.jpg" alt="Latte"></div>
+        <div class="drink-name"><h3>Latte</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/cappuccino.jpg" alt="Cappuccino"></div>
+        <div class="drink-name"><h3>Cappuccino</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/mocha.jpg" alt="Mocha"></div>
+        <div class="drink-name"><h3>Mocha</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/americano.jpg" alt="Americano"></div>
+        <div class="drink-name"><h3>Americano</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/flatwhite.jpg" alt="Flat White"></div>
+        <div class="drink-name"><h3>Flat White</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/matchalatte.jpg" alt="Matcha Latte"></div>
+        <div class="drink-name"><h3>Matcha Latte</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/caramel.jpg" alt="Caramel Macchiato"></div>
+        <div class="drink-name"><h3>Caramel Macchiato</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/icedlatte.jpg" alt="Iced Latte"></div>
+        <div class="drink-name"><h3>Iced Latte</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/icedcoffee.jpg" alt="Iced Coffee"></div>
+        <div class="drink-name"><h3>Iced Coffee</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/blackcoffee.jpg" alt="Black Coffee"></div>
+        <div class="drink-name"><h3>Black Coffee</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/irishcoffee.jpg" alt="Irish Coffee"></div>
+        <div class="drink-name"><h3>Irish Coffee</h3></div>
+      </div>
+    </div>
+
+    <!-- Our Food Section -->
+    <div class="our-food">
+      <p>Our Food</p>
+    </div>
+
+    <div class="menu-container">
+      <!-- Food Items (5 Total) -->
+      <div class="menu-item">
+        <div class="food-img"><img src="images/pizza.jpg" alt="Pizza"></div>
+        <div class="food-name"><h3>Pizza</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/burger.jpg" alt="Burger"></div>
+        <div class="food-name"><h3>Burger</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/salad.jpg" alt="Salad"></div>
+        <div class="food-name"><h3>Salad</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/pasta.jpg" alt="Pasta"></div>
+        <div class="food-name"><h3>Pasta</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/sandwich.jpg" alt="Sandwich"></div>
+        <div class="food-name"><h3>Sandwich</h3></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="menu">
+    <!-- Our Desserts Section -->
+    <div class="our-desserts">
+        <p>Our Desserts</p>
+    </div>
+
+    <div class="menu-container">
+        <!-- Dessert Items (6 Total) -->
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/cheesecake.jpg" alt="Cheesecake"></div>
+            <div class="dessert-name"><h3>Cheesecake</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/brownies.jpg" alt="Brownies"></div>
+            <div class="dessert-name"><h3>Brownies</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/donuts.jpg" alt="Donuts"></div>
+            <div class="dessert-name"><h3>Donuts</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/chocolatecake.jpg" alt="Chocolate Cake"></div>
+            <div class="dessert-name"><h3>Chocolate Cake</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/icecream.jpg" alt="Ice Cream"></div>
+            <div class="dessert-name"><h3>Ice Cream</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/cupcakes.jpg" alt="Cupcakes"></div>
+            <div class="dessert-name"><h3>Cupcakes</h3></div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

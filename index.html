@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Clone</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+     <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="images/logo1.png" alt="Starbucks Logo">
+            
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">menu</a></li>
+                <li><a href="#brews">Our Brews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav>
+           <div class="button">
+            <a href="signup.html"><button class="btn1">SIGN UP</button></a>
+            <button class="btn2"   onclick="toggleSidebar()" >JOIN NOW</button>
+           </div>
+            
+        </nav>
+
+
+        
+<div class="menu-toggle" id="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+    </header> 
+
+
+
+    
+
+    <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+      
+      <!-- Heading and Lines -->
+      <h2>JOIN NOW</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+
+      <!-- Subheading -->
+      <div class="sub-heading">Join now and be a member of our Starbucks!</div>
+
+      <!-- Form -->
+      <form class="join-now-form">
+        <input type="email" placeholder="Enter your Email" required />
+        <input type="password" placeholder="Create a Password" required />
+
+        <label for="payment">Choose Payment Method:</label>
+        <select id="payment" required>
+          <option value="">Select</option>
+          <option value="credit">Credit Card</option>
+          <option value="debit">Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="upi">UPI</option>
+        </select>
+
+        <button type="submit">Become a Member</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to Starbucks</h1>
+            <p>Your daily cup of happiness</p>
+            <a href="#menu" class="btn">Order Now</a>
+        </div>
+    </section>
+
+
+    
+
+
+     <!-- Menu Section -->
+  <section id="menu">
+    <h1 class="menu-heading">MENU</h1>
+    <div class="menu-heading-lines">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <!-- Our Drinks Section -->
+    <div class="our-drinks">
+      <p>Our Drinks</p>
+    </div>
+
+    <div class="menu-container">
+      <!-- Drink Items (12 Total) -->
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/menuimg1.jpg" alt="Espresso"></div>
+        <div class="drink-name"><h3>Hot Coffee</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/menuimg2.jpg" alt="Latte"></div>
+        <div class="drink-name"><h3>Cold Coffee</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/hottea.jpg" alt="Cappuccino"></div>
+        <div class="drink-name"><h3>Hot Tea</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/coldtea.jpg" alt="Mocha"></div>
+        <div class="drink-name"><h3>Cold Tea</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/refresher.jpg" alt="Americano"></div>
+        <div class="drink-name"><h3>Refresher</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/frappuccino.jpg" alt="Flat White"></div>
+        <div class="drink-name"><h3>Frappuccino</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/icedenergy.jpg" alt="Matcha Latte"></div>
+        <div class="drink-name"><h3>Iced Energy</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/HotChocolatelemonde.jpg" alt="Caramel Macchiato"></div>
+        <div class="drink-name"><h3>Hot Chocolate Lemonde</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/spindrift.jpg" alt="Iced Latte"></div>
+        <div class="drink-name"><h3>sprindrift</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/SpindriftLemon.jpg" alt="Iced Coffee"></div>
+        <div class="drink-name"><h3>Sprind Lemon</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/bottledbeverages2.jpg" alt="Black Coffee"></div>
+        <div class="drink-name"><h3>Bottled Beverages</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="drink-img"><img src="images/bottledbeverages2.jpg" alt="Irish Coffee"></div>
+        <div class="drink-name"><h3>Bottled Beverages</h3></div>
+      </div>
+    </div>
+
+    <!-- Our Food Section -->
+    <div class="our-food">
+      <p>Our Food</p>
+    </div>
+
+    <div class="menu-container">
+      <!-- Food Items (5 Total) -->
+      <div class="menu-item">
+        <div class="food-img"><img src="images/foodbreakfast.jpg" alt="Pizza"></div>
+        <div class="food-name"><h3>Breakfast</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/foodbakery.jpg" alt="Burger"></div>
+        <div class="food-name"><h3>Bakery</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/foodtreat.jpg" alt="Salad"></div>
+        <div class="food-name"><h3>Treat</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/foodlunch.jpg" alt="Pasta"></div>
+        <div class="food-name"><h3>Lunch</h3></div>
+      </div>
+      <div class="menu-item">
+        <div class="food-img"><img src="images/foodsnacks.jpg" alt="Sandwich"></div>
+        <div class="food-name"><h3>Snacks</h3></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="menu">
+    <!-- Our Desserts Section -->
+    <div class="our-desserts">
+        <p>Our Desserts</p>
+    </div>
+
+    <div class="menu-container">
+        <!-- Dessert Items (6 Total) -->
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/blueberrycheesecake.jfif" alt="Cheesecake"></div>
+            <div class="dessert-name"><h3>Cheesecake</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/brownie.jpg" alt="Brownies"></div>
+            <div class="dessert-name"><h3>Brownies</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/donuts.jfif" alt="Donuts"></div>
+            <div class="dessert-name"><h3>Donuts</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/signcake.jfif" alt="Chocolate Cake"></div>
+            <div class="dessert-name"><h3>Cake</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/desertcake.jfif" alt="Ice Cream"></div>
+            <div class="dessert-name"><h3>Desert Cake</h3></div>
+        </div>
+        <div class="menu-item">
+            <div class="dessert-img"><img src="images/foodtreat.jpg" alt="Cupcakes"></div>
+            <div class="dessert-name"><h3>Sweet</h3></div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<!-- Our Brews Section -->
+<section class="our-brews" id="brews">
+  <h2>Our Brews</h2>
+  <div class="heading-lines">
+    <div class="line-big"></div>
+    <div class="line-small"></div>
+  </div>
+
+  <div class="brews-container">
+    <div class="brew-card">
+      <img src="images/menuimg1.jpg" alt="Espresso">
+      <h3>Brew</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="brew-card">
+      <img src="images/menuimg2.jpg" alt="Cold Brew">
+      <h3>Brew</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="brew-card">
+      <img src="images/hottea.jpg" alt="Latte">
+      <h3>Brew</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="brew-card">
+      <img src="images/coldtea.jpg" alt="Mocha">
+      <h3>Brew</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="brew-card">
+      <img src="images/icedenergy.jpg" alt="Macchiato">
+      <h3>Brew</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="brew-card">
+      <img src="images/HotChocolatelemonde.jpg" alt="Flat White">
+      <h3>Brew</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <div class="brew-card">
+      <img src="images/refresher.jpg" alt="Affogato">
+      <h3>Brew</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+    <!-- ABOUT US SECTION START -->
+    <section id="about">
+
+      <!-- Heading -->
+      <h1 class="title">ABOUT US</h1>
+    
+      <!-- Decorative Line under Heading -->
+      <div class="about-line"></div>
+    
+      <!-- Shop Banner Image -->
+      <img src="images/homeimg.jpg" alt="Coffee Shop" class="shop-image">
+    
+      <!-- Section 1: Left Image - Right Text -->
+      <div class="row">
+        <div class="image">
+          <img src="images/icedenergy.jpg" alt="Barista Making Coffee">
+        </div>
+        <div class="text">
+          <p>
+            At Starbrew, every cup tells a story. Our journey began with a dream of creating more than just coffee — a space where warmth, aroma, and community thrive.
+            From our expert baristas to handpicked beans, we focus on delivering excellence in every sip.
+          </p>
+        </div>
+      </div>
+    
+      <!-- Section 2: Left Text - Right Image -->
+      <div class="row">
+        <div class="text">
+          <p>
+            We believe in responsible sourcing, ethical practices, and sustainable packaging.
+            Our mission goes beyond beverages — we’re building a culture of comfort, connection, and creativity that fuels your day.
+          </p>
+        </div>
+        <div class="image">
+          <img src="images/hottea.jpg" alt="Cup of Coffee">
+        </div>
+      </div>
+    
+      <!-- Final Centered Section -->
+      <div class="final-about">
+        <div class="circle-img">
+          <img src="images/starbucksceo.webp" alt="Coffee Beans">
+        </div>
+        <h2>The Ceo of Starbucks</h2>
+        <div class="line"></div>
+        <p>
+          At <strong>Starbrew</strong>, we're not just pouring coffee — we're brewing moments.  
+          Each cup holds stories of faraway lands, local love, and timeless rituals.  
+          Our mission is simple: serve warmth, inspire kindness, and stir passion — one sip at a time.
+        </p>
+        <blockquote>
+          “Coffee is not a drink. It's a hug in a mug.”
+        </blockquote>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- Contact Section -->
+  <section class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+    <div class="lines">
+      <div class="line1"></div>
+      <div class="line2"></div>
+    </div>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Starbucks Clone | All Rights Reserved</p>
+    </footer>
+
+
+  
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const buttonGroup = document.querySelector('.button');
+        
+        menuToggle.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+            buttonGroup.classList.toggle('active');
+        });
+        </script>
+        
+
+       
+       <!-- JavaScript -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById('sidebar').classList.toggle('active');
+    }
+  </script> 
+
+
+</body>
+</html>

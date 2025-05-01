@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Starbrew</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      color: #333;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    /* About Us Section Line */
+#about .about-line {
+  width: 100px;
+  height: 4px;
+  background: #C0A062;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+
+    h1.title {
+      text-align: center;
+      font-size: 3rem;
+      color: #6A4E42;
+      margin-bottom: 30px;
+      font-family: 'Georgia', serif;
+    }
+
+    .shop-image {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto 60px;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .row img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .text {
+      flex: 1;
+      min-width: 280px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .image {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    /* Centered Final Section */
+    .final-about {
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .final-about .circle-img {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 30px;
+    }
+
+    .final-about .circle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .final-about h2 {
+      font-size: 2.8rem;
+      color: #6A4E42;
+      margin-bottom: 20px;
+      font-family: 'Georgia', serif;
+      letter-spacing: 1px;
+    }
+
+    .line {
+      width: 80px;
+      height: 4px;
+      background: #C0A062;
+      margin: 10px auto 30px;
+      border-radius: 4px;
+    }
+
+    .final-about p {
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.9;
+      padding: 0 10px;
+    }
+
+    .final-about blockquote {
+      font-style: italic;
+      color: #888;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+
+      h1.title {
+        font-size: 2.2rem;
+      }
+
+      .final-about h2 {
+        font-size: 2rem;
+      }
+
+      .final-about .circle-img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+    <!-- ABOUT US SECTION START -->
+<section id="about">
+
+    <!-- Heading -->
+    <h1 class="title">ABOUT US</h1>
+  
+    <!-- Decorative Line under Heading -->
+    <div class="about-line"></div>
+  
+    <!-- Shop Banner Image -->
+    <img src="images/home3.webp" alt="Coffee Shop" class="shop-image">
+  
+    <!-- Section 1: Left Image - Right Text -->
+    <div class="row">
+      <div class="image">
+        <img src="images/home3.webp" alt="Barista Making Coffee">
+      </div>
+      <div class="text">
+        <p>
+          At Starbrew, every cup tells a story. Our journey began with a dream of creating more than just coffee — a space where warmth, aroma, and community thrive.
+          From our expert baristas to handpicked beans, we focus on delivering excellence in every sip.
+        </p>
+      </div>
+    </div>
+  
+    <!-- Section 2: Left Text - Right Image -->
+    <div class="row">
+      <div class="text">
+        <p>
+          We believe in responsible sourcing, ethical practices, and sustainable packaging.
+          Our mission goes beyond beverages — we’re building a culture of comfort, connection, and creativity that fuels your day.
+        </p>
+      </div>
+      <div class="image">
+        <img src="images/home3.webp" alt="Cup of Coffee">
+      </div>
+    </div>
+  
+    <!-- Final Centered Section -->
+    <div class="final-about">
+      <div class="circle-img">
+        <img src="images/home3.webp" alt="Coffee Beans">
+      </div>
+      <h2>The Aroma of Purpose</h2>
+      <div class="line"></div>
+      <p>
+        At <strong>Starbrew</strong>, we're not just pouring coffee — we're brewing moments.  
+        Each cup holds stories of faraway lands, local love, and timeless rituals.  
+        Our mission is simple: serve warmth, inspire kindness, and stir passion — one sip at a time.
+      </p>
+      <blockquote>
+        “Coffee is not a drink. It's a hug in a mug.”
+      </blockquote>
+    </div>
+  </section>
+  
+
+
+</body>
+</html>
+

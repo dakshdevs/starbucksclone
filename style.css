@@ -1,0 +1,1072 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    /* background-color: #006241; */
+    display: flex;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.navbar .logo img {
+    width: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    gap: 1.5rem;
+    margin-left: 44px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color:#006241;
+ 
+}
+
+
+
+
+.button .btn1 {
+    width: 100px;
+    border-radius: 30px;
+    height: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-left: 10px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: 15px;
+    margin-right: 15px;
+    transition: 1s;
+} 
+.button .btn1:hover {
+    background-color: #d5d5d5;
+    cursor: pointer;
+
+}
+.button .btn2 {
+    width: 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    border: 1px solid black;
+    
+}
+.button .btn2:hover{
+    background-color: #413d3d;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* New CSS for Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+
+
+
+/* Navbar normal styles tumhare waise ke waise rahenge */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links-container {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+    }
+    .button{
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        margin-top: 285px;
+    }
+
+
+    .nav-links.active,
+    .button.active {
+        display: flex;
+    }
+    .nav-links.active{
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        margin-top: 18px;
+        height: 50vh;
+
+    }
+     
+    .nav-links-container.active {
+        display: flex;
+    }
+    } 
+
+    
+
+    /* .nav-links {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    } */
+
+    /* .nav-links li {
+        margin: 6px ;
+    }  */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+      flex-direction: column;
+      background-color: #006241;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      display: none;
+  }
+  .nav-links.active {
+      display: flex;
+  }
+}
+
+
+
+
+
+
+/* Hero Section */
+.hero {
+    background: url('images/home.jpg') no-repeat center center/cover;
+    height: 90vh;
+    /* margin-top: 13px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2f2e2e;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.btn {
+    padding: 0.7rem 1.5rem;
+    background-color: #c7a008;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #a77c00;
+}
+
+
+
+
+
+section {
+    padding: 60px 20px;
+  }
+
+  #menu {
+    background-color: transparent;
+  }
+
+  /* MENU Heading */
+  .menu-heading {
+    text-align: center;
+    font-size: 3rem;
+    color: #6A4E42;
+    font-family: 'Georgia', serif;
+  }
+
+  .menu-heading-lines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    margin-bottom: 60px;
+  }
+
+  /* Upper Line (Bigger width) */
+  .menu-heading-lines .line:first-child {
+    width: 120px;
+    height: 4px;
+    background-color: #C0A062;
+  }
+
+  /* Lower Line (Default width) */
+  .menu-heading-lines .line:last-child {
+    width: 80px;
+    height: 4px;
+    background-color: #C0A062;
+  }
+
+  /* Our Drinks Title with Left-Aligned Line */
+  .our-drinks {
+    position: relative;
+    font-size: 2rem;
+    color: #6A4E42;
+    margin-bottom: 70px;
+    width: fit-content;
+    padding-bottom: 10px;
+  }
+
+  .our-drinks::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #C0A062;
+  }
+
+  /* Our Food Title with Left-Aligned Line */
+  .our-food {
+    position: relative;
+    font-size: 2rem;
+    color: #6A4E42;
+    margin-bottom: 100px; /* Increased space from Drinks section */
+    margin-top: 100px;  /* Added space above Our Food */
+    width: fit-content;
+    padding-bottom: 10px;
+  }
+
+  .our-food::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #C0A062;
+  }
+
+  /* Menu Grid Layout */
+  .menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    row-gap: 80px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+
+  .drink-img, .food-img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .drink-img img, .food-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .drink-name, .food-name {
+    margin: 0;
+  }
+
+  .drink-name h3, .food-name h3 {
+    font-size: 1.5rem;
+    color: #6A4E42;
+  }
+
+
+
+  .menu-heading {
+      text-align: center;
+      font-size: 3rem;
+      color: #6A4E42;
+      font-family: 'Georgia', serif;
+  }
+
+  .menu-heading-lines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      margin-bottom: 60px;
+  }
+
+  .menu-heading-lines .line {
+      width: 80px;
+      height: 4px;
+      background-color: #C0A062;
+  }
+
+  .our-desserts {
+      position: relative;
+      font-size: 2rem;
+      color: #6A4E42;
+      margin-bottom: 70px;
+      width: fit-content;
+      padding-bottom: 10px;
+  }
+
+  .our-desserts::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 4px;
+      width: 100%;
+      background-color: #C0A062;
+  }
+
+  .menu-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 items in each row */
+      gap: 40px;
+      row-gap: 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+
+  .menu-item {
+      display: flex;
+      align-items: center;
+      text-align: left;
+  }
+
+  .dessert-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .dessert-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .dessert-name h3 {
+      font-size: 1.5rem;
+      color: #6A4E42;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .menu-heading {
+      font-size: 2.2rem;
+    }
+  
+    .our-drinks, .our-food, .our-desserts {
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+    }
+  
+    .menu-container {
+      grid-template-columns: 1fr; /* 1 item per row */
+      gap: 30px;
+      row-gap: 50px;
+    }
+  
+    /* IMPORTANT: Keep image left and name right on mobile too */
+    .menu-item {
+      flex-direction: row; /* Keep row direction */
+      align-items: center;
+      text-align: left;
+    }
+  
+    .drink-img, .food-img, .dessert-img {
+      margin-right: 15px;
+      margin-bottom: 0;
+      width: 100px;
+      height: 100px;
+    }
+  
+    .drink-name h3, .food-name h3, .dessert-name h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
+  
+  /* Tablet Devices (min-width: 769px and max-width: 1024px) */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .menu-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+      gap: 35px;
+      row-gap: 60px;
+    }
+  
+    .menu-item {
+      flex-direction: row;
+      text-align: left;
+    }
+  
+    .drink-img, .food-img, .dessert-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .drink-name h3, .food-name h3, .dessert-name h3 {
+      font-size: 1.4rem;
+    }
+  }
+  
+
+
+
+
+
+
+/* Our Brews Section */
+.our-brews {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.our-brews h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #6A4E42;
+}
+
+/* Decorative Lines */
+.heading-lines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.line-big, .line-small {
+  height: 4px;
+  background-color: #C0A062;
+}
+
+.line-big {
+  width: 120px;
+  margin-bottom: 5px;
+}
+
+.line-small {
+  width: 60px;
+}
+
+/* Grid Layout for Brews */
+.brews-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 cards per row */
+  gap: 40px; /* Space between cards */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brew-card {
+  background-color: #f7f4f1;
+  border-radius: 15px;
+  padding: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.brew-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.brew-card h3 {
+  font-size: 1.5rem;
+  color: #6A4E42;
+  margin-bottom: 10px;
+}
+
+.brew-card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Unique Card Effects */
+.brew-card:nth-child(1) {
+  transform: rotate(-2deg) translateY(-5px);
+}
+
+.brew-card:nth-child(2) {
+  transform: rotate(3deg) translateY(10px);
+}
+
+.brew-card:nth-child(3) {
+  transform: rotate(-4deg) translateX(-5px);
+}
+
+.brew-card:nth-child(4) {
+  transform: rotate(2deg) translateX(6px);
+}
+
+.brew-card:nth-child(5) {
+  transform: rotate(-3deg) translateY(7px);
+}
+
+.brew-card:nth-child(6) {
+  transform: rotate(4deg) translateX(-8px);
+}
+
+.brew-card:nth-child(7) {
+  transform: rotate(-1deg) translateY(-10px);
+}
+
+.brew-card:hover {
+  transform: rotate(0deg) translate(0) scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile and Tablet Views */
+@media (max-width: 768px) {
+  .our-brews h2 {
+    font-size: 2.5rem;
+  }
+
+  .brews-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+    gap: 30px; /* Adjust gap for medium screens */
+  }
+
+  .brew-card {
+    transform: rotate(0deg) translate(0); /* Remove card tilt on smaller screens */
+  }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 500px) {
+  .our-brews h2 {
+    font-size: 2rem;
+  }
+
+  .brews-container {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+    gap: 20px; /* Adjust gap for small screens */
+  }
+
+  .brew-card {
+    transform: rotate(0deg) translate(0); /* Remove card tilt */
+  }
+}
+
+
+
+
+
+
+
+    /* About Us Section Line */
+    #about .about-line {
+      width: 100px;
+      height: 4px;
+      background: #C0A062;
+      margin: 20px auto;
+      border-radius: 4px;
+    }
+    
+        h1.title {
+          text-align: center;
+          font-size: 3rem;
+          color: #6A4E42;
+          margin-bottom: 30px;
+          font-family: 'Georgia', serif;
+        }
+    
+        .shop-image {
+          width: 100%;
+          max-width: 900px;
+          margin: 0 auto 60px;
+          display: block;
+          border-radius: 12px;
+          box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    
+        .row {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          max-width: 1100px;
+          margin: 0 auto 80px;
+          gap: 40px;
+          flex-wrap: wrap;
+        }
+    
+        .row img {
+          width: 100%;
+          max-width: 400px;
+          border-radius: 10px;
+          box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+    
+        .text {
+          flex: 1;
+          min-width: 280px;
+          font-size: 1.1rem;
+          line-height: 1.8;
+          color: #444;
+        }
+    
+        .image {
+          flex: 1;
+          min-width: 280px;
+        }
+    
+        /* Centered Final Section */
+        .final-about {
+          text-align: center;
+          max-width: 900px;
+          margin: auto;
+        }
+    
+        .final-about .circle-img {
+          width: 200px;
+          height: 200px;
+          margin: 0 auto 30px;
+        }
+    
+        .final-about .circle-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+    
+        .final-about h2 {
+          font-size: 2.8rem;
+          color: #6A4E42;
+          margin-bottom: 20px;
+          font-family: 'Georgia', serif;
+          letter-spacing: 1px;
+        }
+    
+        .line {
+          width: 80px;
+          height: 4px;
+          background: #C0A062;
+          margin: 10px auto 30px;
+          border-radius: 4px;
+        }
+    
+        .final-about p {
+          font-size: 1.1rem;
+          color: #444;
+          line-height: 1.9;
+          padding: 0 10px;
+        }
+    
+        .final-about blockquote {
+          font-style: italic;
+          color: #888;
+          margin-top: 30px;
+        }
+    
+        @media (max-width: 768px) {
+          .row {
+            flex-direction: column;
+          }
+    
+          h1.title {
+            font-size: 2.2rem;
+          }
+    
+          .final-about h2 {
+            font-size: 2rem;
+          }
+    
+          .final-about .circle-img {
+            width: 150px;
+            height: 150px;
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* Contact Section */
+    .contact-section {
+      padding: 40px 20px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .contact-section h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #6A4E42; /* ✅ Correct text color */
+    }
+
+    /* Decorative lines below heading */
+    .lines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .line1 {
+      width: 150px;
+      height: 4px;
+      background-color: #C0A062;
+      margin-bottom: 5px;
+    }
+
+    .line2 {
+      width: 110px;
+      height: 4px;
+      background-color: #C0A062;
+    }
+
+    .contact-form {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+      resize: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #000;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-form button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 120px;
+      margin: 0 auto;
+    }
+
+    .contact-form button:hover {
+      background-color: #222;
+    }
+
+    @media (max-width: 600px) {
+      .contact-section h2 {
+        font-size: 26px;
+      }
+
+      .contact-form {
+        padding: 0 10px;
+      }
+
+      .line1 {
+        width: 80px;
+      }
+
+      .line2 {
+        width: 50px;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+.contact input, .contact textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.footer {
+    background: #004d3a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Sidebar Panel */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+  transition: right 0.4s ease-in-out;
+  z-index: 9999;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-content h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.line1, .line2 {
+  background-color: #C0A062;
+  height: 4px;
+  margin: 5px auto;
+}
+
+.line1 {
+  width: 100px;
+}
+
+.line2 {
+  width: 60px;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  color: #444;
+}
+
+.join-now-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.join-now-form input,
+.join-now-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.join-now-form button {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.join-now-form button:hover {
+  background-color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .join-now-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .sidebar-content h2 {
+    font-size: 22px;
+  }
+
+  .sub-heading {
+    font-size: 16px;
+  }
+
+  .join-now-form input,
+  .join-now-form select {
+    font-size: 15px;
+  }
+
+  .join-now-form button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .line1 {
+    width: 80px;
+  }
+
+  .line2 {
+    width: 50px;
+  }
+
+  .sidebar-content h2 {
+    font-size: 20px;
+  }
+
+  .sub-heading {
+    font-size: 15px;
+  }
+}
+
+
+
+
+

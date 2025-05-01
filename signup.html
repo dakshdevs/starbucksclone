@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Starbucks Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      background-color: white;
+      position: relative;
+    }
+
+    .logo img {
+      width: 60px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2.5rem;
+      text-transform: uppercase;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      flex-grow: 1;
+      justify-content: center; /* Center the nav links */
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #006241;
+    }
+
+    .button {
+      display: flex;
+      gap: 10px;
+      justify-content: flex-end; /* Position buttons at the end */
+    }
+
+    .btn1, .btn2 {
+      width: 100px;
+      height: 30px;
+      border-radius: 30px;
+      font-size: 15px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      border: 1px solid black;
+      transition: 0.3s;
+    }
+
+    .btn1 {
+      background-color: white;
+      color: black;
+    }
+
+    .btn1:hover {
+      background-color: #d5d5d5;
+      cursor: pointer;
+    }
+
+    .btn2 {
+      background-color: black;
+      color: white;
+    }
+
+    .btn2:hover {
+      background-color: #413d3d;
+      cursor: pointer;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: white;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 10;
+      }
+
+      .nav-container.active {
+        display: flex;
+        align-items: start;
+        
+      }
+
+      .nav-links {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 2rem;
+      }
+
+      .button {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 2rem;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+
+    .signup-section {
+      padding: 40px 20px 20px;
+      background-color: #ffffff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .signup-section h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #6A4E42;
+    }
+
+    .lines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .line1, .line2 {
+      background-color: #C0A062;
+      height: 4px;
+    }
+
+    .line1 {
+      width: 100px;
+      margin-bottom: 5px;
+    }
+
+    .line2 {
+      width: 60px;
+    }
+
+    .signup-form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .row {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .row input, .signup-form input {
+      padding: 14px 18px;
+      font-size: 17px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .signup-form input:focus {
+      border-color: #000;
+      outline: none;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .signup-form button {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 190px;
+      margin: 10px auto 0;
+    }
+
+    .signup-form button:hover {
+      background-color: #222;
+    }
+
+    @media (max-width: 600px) {
+      .signup-section h2 {
+        font-size: 26px;
+      }
+
+      .line1 {
+        width: 80px;
+      }
+
+      .line2 {
+        width: 50px;
+      }
+
+      .row {
+        flex-direction: column;
+      }
+    }
+
+
+
+
+    .back-home {
+  position: absolute;
+  top: 190px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  z-index: 20;
+  animation: floatUpDown 2s ease-in-out infinite;
+}
+
+.back-home:hover {
+  background-color: #333;
+}
+
+/* Floating animation */
+@keyframes floatUpDown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .back-home {
+    top: 180px;
+    right: 10px;
+    font-size: 12px;
+    padding: 8px 14px;
+  }
+}
+
+
+.footer {
+    background: #004d3a;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+
+
+
+
+
+/* Sidebar Panel */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 400px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -4px 0 12px rgba(0,0,0,0.2);
+  transition: right 0.4s ease-in-out;
+  z-index: 9999;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-content h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+}
+
+.line1, .line2 {
+  background-color: #C0A062;
+  height: 4px;
+  margin: 5px auto;
+}
+
+.line1 {
+  width: 100px;
+}
+
+.line2 {
+  width: 60px;
+}
+
+.sub-heading {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  color: #444;
+}
+
+.join-now-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.join-now-form input,
+.join-now-form select {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.join-now-form button {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.join-now-form button:hover {
+  background-color: #333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .join-now-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .sidebar-content h2 {
+    font-size: 22px;
+  }
+
+  .sub-heading {
+    font-size: 16px;
+  }
+
+  .join-now-form input,
+  .join-now-form select {
+    font-size: 15px;
+  }
+
+  .join-now-form button {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .line1 {
+    width: 80px;
+  }
+
+  .line2 {
+    width: 50px;
+  }
+
+  .sidebar-content h2 {
+    font-size: 20px;
+  }
+
+  .sub-heading {
+    font-size: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+  <a href="index.html" class="back-home">← Back to Home</a>
+
+
+  <header class="navbar">
+    <div class="logo">
+      <img src="images/logo1.png" alt="Starbucks Logo">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <div class="nav-container" id="nav-container">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#menu">About</a></li>
+        <li><a href="#rewards">Menu</a></li>
+        <li><a href="#giftcards">Our Brews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="button">
+        <button class="btn1">SIGN UP</button>
+        <button class="btn2"  onclick="toggleSidebar()" >JOIN NOW</button>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+   <!-- Sidebar -->
+   <div class="sidebar" id="sidebar">
+    <div class="sidebar-content">
+      <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+      
+      <!-- Heading and Lines -->
+      <h2>JOIN NOW</h2>
+      <div class="line1"></div>
+      <div class="line2"></div>
+
+      <!-- Subheading -->
+      <div class="sub-heading">Join now and be a member of our Starbucks!</div>
+
+      <!-- Form -->
+      <form class="join-now-form">
+        <input type="email" placeholder="Enter your Email" required />
+        <input type="password" placeholder="Create a Password" required />
+
+        <label for="payment">Choose Payment Method:</label>
+        <select id="payment" required>
+          <option value="">Select</option>
+          <option value="credit">Credit Card</option>
+          <option value="debit">Debit Card</option>
+          <option value="paypal">PayPal</option>
+          <option value="upi">UPI</option>
+        </select>
+
+        <button type="submit">Become a Member</button>
+      </form>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section class="signup-section">
+    <h2>Sign Up</h2>
+    <div class="lines">
+      <div class="line1"></div>
+      <div class="line2"></div>
+    </div>
+    <form class="signup-form">
+      <div class="row">
+        <input type="text" placeholder="Name" required />
+        <input type="text" placeholder="Full Name" required />
+      </div>
+      <input type="email" placeholder="Email Address" required />
+      <input type="password" placeholder="Password" required />
+      <input type="password" placeholder="Confirm Password" required />
+      <input type="tel" placeholder="Phone Number" required />
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+
+
+
+
+
+
+   <!-- Footer -->
+   <footer class="footer">
+    <p>&copy; 2025 Starbucks Clone | All Rights Reserved</p>
+</footer>
+
+
+
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav-container').classList.toggle('active');
+    }
+  </script>
+
+
+     <!-- JavaScript -->
+     <script>
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle('active');
+      }
+    </script>
+
+
+
+</body>
+</html>
